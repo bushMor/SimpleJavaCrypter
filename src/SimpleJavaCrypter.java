@@ -15,7 +15,7 @@ public class SimpleJavaCrypter extends JFrame{
     }
 
 
-    public SimpleJavaCrypter(){
+    private SimpleJavaCrypter(){
         super("SimpleJavaCrypter");
         this.setSize(410, 210);
         this.setResizable(false);
@@ -55,8 +55,8 @@ public class SimpleJavaCrypter extends JFrame{
     }
 
     private char cryptChar(boolean encrypt, char c) {
-        String CHECKS = ("abcdefghijklmnopqrstuvwxyz1234567890");
-        String REPLACES = ("0qa9zxs3wedc6vf28r5tgb7nhyujm1kiolp4");
+        String CHECKS = ("abcdefghijklmnopqrstuvwxyz 1234567890!?'-");
+        String REPLACES = ("0-qa!9z xs3wedc6vf28?r'5tgb7nhyujm1kiolp4");
         int index = 0;
         if (encrypt) {
             for (int i = 0; i < CHECKS.length(); i++) {
